@@ -21,6 +21,12 @@
 <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet"> 
 <!-- //web-fonts -->  
+<!-- avatar -->
+<style>
+.wthree-services-grid  img{border-radius: 40px;}
+</style> 
+
+}
 </head> 
 <body>
 	<!-- header 
@@ -242,12 +248,12 @@
 					</div>
 					<div class="wthree-services-info">
 						<h5>杨斯麟</h5>
-						<p>路得分区组长<br><br><br></p>
+						<p id="pbr">路得分区组长 </p>
 					</div>
 				</div>
 				<div class="col-sm-3 col-xs-6 wthree-services-grid">
 					<div class="wthree-services-icon">
-						<i class="fa fa-user" aria-hidden="true"></i>
+						<img src="images/myz.jpg" alt="">
 					</div>
 					<div class="wthree-services-info">
 						<h5>马远征</h5>
@@ -284,7 +290,7 @@
 				</div>
 				<div class="col-sm-3 col-xs-6 wthree-services-grid">
 					<div class="wthree-services-icon">
-						<i class="fa fa-user" aria-hidden="true"></i>
+						<img style="border-radius:40px" src="images/zj.jpg" alt="">
 					</div>
 					<div class="wthree-services-info">
 						<h5>张家军</h5>
@@ -582,10 +588,22 @@
 				});
 			});
 	</script>
+
+<script>
+	$(document).ready(function(){
+		if($(window).width()<=660)
+			{
+				console.log($(window).width()+"===width")
+				$("#pbr").append("<br><br><br>")
+			}
+	})
+</script>
+
 	<!-- //end-smooth-scrolling -->	
 	<!-- smooth-scrolling-of-move-up -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+			
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id
